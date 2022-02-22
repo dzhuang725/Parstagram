@@ -13,7 +13,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var posts: [PFObject]()
+    var posts = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
-        cell.photoView.af_setImage(withURL: url)
+        cell.photoView.af.setImage(withURL: url)
         
         return cell
     }
